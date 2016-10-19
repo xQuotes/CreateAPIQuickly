@@ -24,3 +24,18 @@ export function handleDBMethod(req, res, next) {
   }
   next()
 }
+
+//checkDBAuth
+export function checkDBAuth(req, res, next) {
+  const { dbName } = req.params
+  
+  let db = {}
+  db = {
+    dbName: `${dbName}`,
+    url: `mongodb:\/\/localhost:27017/${dbName}`
+  }
+
+  _.set(req, 'db', db)
+  
+  next()
+}
