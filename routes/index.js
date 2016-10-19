@@ -10,7 +10,6 @@ export default function routes(app){
     const {url} = req.db
     const {collectionName} = req.params
     getModel(url).insert(collectionName, {
-      uid: req.user.uid,
       ...req.body
     })
     .then((data)=> res.json({
@@ -57,7 +56,6 @@ export default function routes(app){
     const {_id, collectionName} = req.params
     getModel(url)
     .updateById(collectionName, _id, {
-      uid: req.user.uid,
       ...req.body
     })
     .then((data) => res.json({
@@ -72,7 +70,6 @@ export default function routes(app){
     const {url, query, methods} = req.db
     const {collectionName} = req.params
     getModel(url).update(collectionName, query, {
-      uid: req.user.uid,
       ...req.body
     })
     .then((data) => res.json({
