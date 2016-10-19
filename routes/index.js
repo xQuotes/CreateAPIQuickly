@@ -40,7 +40,6 @@ export default function routes(app){
     const {collectionName} = req.params
     
     getModel(url).find(collectionName, {
-      uid: req.user.uid, 
       ...query
     }, methods)
     .then((data) => res.json({

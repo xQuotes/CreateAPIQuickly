@@ -1,6 +1,6 @@
 ## Create API Quickly
 
->>
+>
 在前后端分离情况下，后端提供接口的速度往往无法满足个人的需求，为了方便前端开发，总需要有一套API接口提前开发出来；该程序就是为了方便前端开发提供通用的`API`接口。
 
 ## Requirements
@@ -15,6 +15,7 @@
 git clone https://github.com/xQuotes/CreateAPIQuickly.git
 cd CreateAPIQuickly
 npm install
+npm install -g nodemon
 
 // 启动 mongoDB
 sudo mongod --dbpath=/path/mongodb
